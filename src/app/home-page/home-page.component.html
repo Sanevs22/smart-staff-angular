@@ -1,0 +1,23 @@
+<div class="main">
+  <div>
+    <img class="avatar" src="assets/img/avatar.png" alt="" />
+    <form [formGroup]="loginForm">
+      <p>
+        <tui-input formControlName="email">
+          email
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+
+      <p>
+        <tui-input formControlName="password">
+          password
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+      <p>
+        <button tuiButton (click)="login()">login</button>
+      </p>
+    </form>
+  </div>
+</div>

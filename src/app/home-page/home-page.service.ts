@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-const host = 'https://7f5d-89-232-116-78.ngrok-free.app';
+const host = 'https://0162-89-232-116-78.ngrok-free.app';
 
 @Injectable({
   providedIn: 'root',

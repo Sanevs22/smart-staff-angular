@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HomePageService } from './home-page.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -8,9 +9,15 @@ import { HomePageService } from './home-page.service';
   styleUrls: ['./home-page.component.less'],
 })
 export class HomePageComponent {
-  constructor(private homePageService: HomePageService) {}
+  constructor(
+    public homePageService: HomePageService,
+    private router: Router
+  ) {}
   ngOnInit(): void {
     this.checkNetworkStatus();
+    if (localStorage.getItem('login')) {
+      this.router.navigate(['/lesson']);
+    }
   }
   networkStatus: boolean = false;
 
@@ -28,7 +35,7 @@ export class HomePageComponent {
       this.loginForm.controls.email.value !== null &&
       this.loginForm.controls.password.value
     ) {
-      this.homePageService.login(
+      let res = this.homePageService.login(
         this.loginForm.controls.email.value,
         this.loginForm.controls.password.value
       );

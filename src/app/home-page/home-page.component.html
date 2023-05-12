@@ -1,6 +1,5 @@
 <div class="main">
-  <h2>{{ networkStatus }}</h2>
-  <div>
+  <div *ngIf="networkStatus">
     <img class="avatar" src="assets/img/avatar.png" alt="" />
     <form [formGroup]="loginForm">
       <p>
@@ -15,6 +14,9 @@
           password
           <input tuiTextfield />
         </tui-input>
+        <span *ngIf="this.homePageService.errLogi"
+          >Неверный логин или пароль</span
+        >
       </p>
       <p>
         <button tuiButton (click)="login()">login</button>

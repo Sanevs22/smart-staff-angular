@@ -27,10 +27,7 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "**/*",
-              "node_modules/@taiga-ui/icons/src",
-              "assets/taiga-ui/icons"
+              "src/assets"
             ],
             "styles": [
               "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less",

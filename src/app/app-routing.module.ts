@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: AppComponent },
   { path: 'profile', component: ProfilePageComponent },
   { path: 'login', component: LogopassComponent },
+  { path: '**', component: AppComponent },
 ];
 
 @NgModule({

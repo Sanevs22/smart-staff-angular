@@ -9,10 +9,19 @@ import { HomePageService } from './home-page.service';
 })
 export class HomePageComponent {
   constructor(private homePageService: HomePageService) {}
+  ngOnInit(): void {
+    this.checkNetworkStatus();
+  }
+  networkStatus: boolean = false;
+
   loginForm = new FormGroup({
     email: new FormControl(null),
     password: new FormControl(null),
   });
+
+  checkNetworkStatus() {
+    this.networkStatus = navigator.onLine;
+  }
 
   login() {
     if (

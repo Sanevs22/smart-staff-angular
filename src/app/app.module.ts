@@ -16,12 +16,20 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   TuiInputModule,
+  TuiInputPasswordModule,
   TuiIslandModule,
   TuiRadioBlockModule,
 } from '@taiga-ui/kit';
 import { LessonComponent } from './lesson/lesson.component';
 import { LessonItemComponent } from './lesson-item/lesson-item.component';
 import { ResultComponent } from './result/result.component';
+
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
@@ -49,8 +57,11 @@ const appRoutes: Routes = [
     TuiButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    TuiInputPasswordModule,
     TuiIslandModule,
-
+    LottieModule.forRoot({
+      player: playerFactory,
+    }),
     TuiRadioBlockModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),

@@ -14,3 +14,34 @@ button {
   display: block;
   margin: 10px auto;
 }
+
+.off {
+  margin: 40vh auto;
+}
+
+.m20 {
+  margin-top: 10vh;
+}
+
+.imgOff {
+  display: block;
+  max-width: 200px;
+  margin: 20px auto;
+
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

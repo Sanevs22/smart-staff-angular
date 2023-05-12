@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-const host = 'http://localhost:3000/user/login';
+const host = 'https://7f5d-89-232-116-78.ngrok-free.app';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,7 @@ export class HomePageService {
 
   login(name: string, password: string): Observable<any> {
     let x = this.httpClient
-      .post<any>(host, { email: name, password: password })
+      .post<any>(`${host}/user/login`, { email: name, password: password })
       .subscribe(
         (result) => {
           this.errLogi = false;
@@ -31,6 +31,6 @@ export class HomePageService {
           return error;
         }
       );
-    return this.httpClient.post<any>(host, { name, password });
+    return this.httpClient.post<any>(`${host}/user/login`, { name, password });
   }
 }

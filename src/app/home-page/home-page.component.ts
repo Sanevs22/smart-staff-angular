@@ -22,7 +22,7 @@ export class HomePageComponent {
   }
   networkStatus: boolean = false;
   lottieOptions: AnimationOptions = {
-    path: 'https://assets1.lottiefiles.com/packages/lf20_pNx6yH.json',
+    path: 'assets/img/img.json',
     loop: true,
     autoplay: true,
   };

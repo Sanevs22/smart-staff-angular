@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
+## Проект для хакатона по мобильной разработке JS от Сбера 12.05.2023
+
+Реализация PWA на Angular. Сервер в репозитории https://github.com/Sanevs22/store-nest-js-server.git Ветка Staff
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
